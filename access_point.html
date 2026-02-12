@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Access Point Details</title>
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    background: #f5f5f5;
+}
+
+h1 {
+    color: #0d1b2a;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #0d1b2a;
+    color: #fff;
+}
+
+td[contenteditable="true"] {
+    background: #fffbe6;
+}
+
+button {
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn { background: #1b263b; color: #fff; }
+.print-btn { background: #0d1b2a; color: #fff; }
+.delete-btn { background: crimson; color: #fff; }
+
+.total-box {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hide buttons when printing */
+@media print {
+    button, .no-print {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>ACCESS POINT DETAILS</h1>
+<p>Below are the details of Access Points installed in various locations:</p>
+
+<table id="apTable">
+    <thead>
+        <tr>
+            <th>Location</th>
+            <th>Number of APs</th>
+            <th class="no-print">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td contenteditable="true">Computer Laboratory</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Library</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Chemistry Lab</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Biology Lab</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Physics Lab</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Old Computer Lab</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">JSS 2 Block</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Staff Office</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">JSS 3 Block</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Art Studio</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">JSS 1 Block</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">School Compound</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Language / Math / Music Lab</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">SS 1 Block</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Sick Bay</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Home Economics Lab</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">CSS 3 Block</td>
+            <td contenteditable="true" class="apCount">2</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Reception</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Account Office</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">Principal Office</td>
+            <td contenteditable="true" class="apCount">1</td>
+            <td class="no-print"><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div class="total-box">
+    Total Access Points: <span id="totalAP"></span>
+</div>
+
+<br>
+
+<button class="add-btn no-print" onclick="addRow()">Add New Row</button>
+<button class="print-btn no-print" onclick="window.print()">Print</button>
+
+<br><br>
+<a href="report.html" class="no-print">Back to Invoice</a>
+
+<script>
+
+function addRow() {
+    const table = document.getElementById("apTable").getElementsByTagName("tbody")[0];
+
+    const row = table.insertRow();
+    row.innerHTML = `
+        <td contenteditable="true">New Location</td>
+        <td contenteditable="true" class="apCount">1</td>
+        <td class="no-print">
+            <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+        </td>
+    `;
+
+    updateTotal();
+}
+
+function deleteRow(btn) {
+    btn.closest("tr").remove();
+    updateTotal();
+}
+
+function updateTotal() {
+    let total = 0;
+    const counts = document.querySelectorAll(".apCount");
+
+    counts.forEach(cell => {
+        let value = parseInt(cell.innerText) || 0;
+        total += value;
+    });
+
+    document.getElementById("totalAP").innerText = total;
+}
+
+document.addEventListener("input", function(e) {
+    if (e.target.classList.contains("apCount")) {
+        updateTotal();
+    }
+});
+
+updateTotal();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HYBRID NETWORKS INVOICE</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#eef2f7;
+    padding:40px;
+}
+
+.invoice-box{
+    max-width:900px;
+    margin:auto;
+    background:#ffffff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:3px solid #0d1b2a;
+    padding-bottom:20px;
+}
+
+.header-left h1{
+    font-size:32px;
+    font-weight:700;
+    color:#0d1b2a;
+    letter-spacing:2px;
+}
+
+.company{
+    text-align:right;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.company strong{
+    font-size:18px;
+    color:#0d1b2a;
+}
+
+.logo{
+    width:130px;
+    margin-bottom:8px;
+}
+
+/* INFO SECTION */
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+
+.info div{
+    width:48%;
+    background:#f8fafc;
+    padding:15px;
+    border-radius:8px;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+th{
+    background:#0d1b2a;
+    color:#fff;
+    padding:14px;
+    font-weight:500;
+    text-align:left;
+    font-size:14px;
+}
+
+td{
+    padding:14px;
+    border-bottom:1px solid #e5e7eb;
+    font-size:14px;
+}
+
+tr:hover{
+    background:#f9fafb;
+}
+
+/* INPUT STYLE */
+input{
+    width:90px;
+    padding:6px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+/* SUMMARY */
+.summary{
+    width:350px;
+    float:right;
+    margin-top:30px;
+    background:#f8fafc;
+    padding:20px;
+    border-radius:10px;
+}
+
+.summary table{
+    width:100%;
+}
+
+.summary td{
+    border:none;
+    padding:8px 0;
+}
+
+.summary .grand{
+    background:#e68312;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    padding:12px;
+    border-radius:6px;
+}
+.lineTotal {
+    font-weight: bold;
+}
+
+/* PAYMENT */
+.payment{
+    clear:both;
+    margin-top:60px;
+    padding-top:20px;
+    border-top:1px solid #ddd;
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* PRINT BUTTON */
+.print-btn{
+    margin-top:30px;
+    text-align:right;
+}
+
+.print-btn button{
+    background:#0d1b2a;
+    color:#fff;
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-family:'Poppins';
+}
+
+.print-btn button:hover{
+    background:#1b263b;
+}
+
+/* PRINT MODE */
+@media print{
+    body{
+        background:#fff;
+        padding:0;
+    }
+    .invoice-box{
+        box-shadow:none;
+        border-radius:0;
+    }
+    .print-btn{
+        display:none;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="invoice-box">
+
+  <!-- HEADER -->
+  <div class="header">
+      <div class="header-left">
+          <h1>INVOICE</h1>
+      </div>
+
+      <div class="company">
+          <img src="logo.png" class="logo"><br>
+          <strong>HYBRID NETWORKS</strong><br>
+          Lagos<br>
+          07083275665<br>
+          info@hybridnetworks.ng<br>
+          https://hybridnetworks.ng
+      </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="info">
+      <div>
+          <strong>INVOICE TO:</strong><br>
+          YABATECH SECONDARY SCHOOL<br>
+          Phone: 08028273888<br>
+          Address: Moree street, YabaTech
+      </div>
+
+      <div>
+          <strong>Invoice No:</strong> 20260053<br>
+          <strong>Invoice Date:</strong> 12 FEBRUARY 2026
+      </div>
+  </div>
+
+  <!-- INTERNET INSTALLATION TABLE -->
+  <table border="1" cellpadding="10">
+      <h4>Internet Installation</h4>
+      <thead>
+          <tr>
+              <th>Description</th>
+              <th>INSTALLATION</th>
+              <th>SUBSCRIPTION</th>
+              <th>TOTAL</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Lagos 20Mbps DEDICATED</td>
+              <td><input type="number" class="qtty" value="150000"></td>
+              <td><input type="number" class="priice" value="200000"></td>
+              <td class="llineTotal"><b>#0</b></td>
+          </tr>
+      </tbody>
+  </table>
+  <p>Monthly Payment: ₦215,000 (including VAT)</p><br>
+
+  <!-- LOCAL NETWORKING TABLE -->
+  <table border="1" cellpadding="10">
+      <h4>Local Networking</h4>
+      <thead>
+          <tr>
+              <th>NAME</th>
+              <th>QUANTITY</th>
+              <th>PRICE</th>
+              <th>TOTAL</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><a href="access_point.html" target="_blank">ACCESS POINT</a></td>
+              <td><input type="number" class="qty" value="26"></td>
+              <td><input type="number" class="price" value="85000"></td>
+              <td class="lineTotal">0</td>
+          </tr>
+          <tr>
+              <td>Network Cable (CAT6)</td>
+              <td><input type="number" class="qty" value="2"></td>
+              <td><input type="number" class="price" value="95000"></td>
+              <td class="lineTotal">0</td>
+          </tr>
+          <tr>
+              <td>Media Converter</td>
+              <td><input type="number" class="qty" value="4"></td>
+              <td><input type="number" class="price" value="45000"></td>
+              <td class="lineTotal">0</td>
+          </tr>
+          <tr>
+              <td>RJ45 Connector</td>
+              <td><input type="number" class="qty" value="100"></td>
+              <td><input type="number" class="price" value="50"></td>
+              <td class="lineTotal">0</td>
+          </tr>
+          <tr>
+              <td>Workmanship</td>
+              <td></td>
+              <td></td>
+              <td class="lineTotal" ></b>#300000</b></td>
+          </tr>
+           <tr>
+            <td><b>Total Local Networking</b></td>
+            <td></td>
+            <td></td>
+            <td class="lineTotal" id="totalLocalNetworking"><b>#0</b></td>
+        </tr>
+      </tbody>
+  </table>
+
+
+  <div>
+      <table border="1" cellpadding="10">
+          <tr>
+              <td>Internet Installation</td>
+              <td><span id="int">0</span></td>
+          </tr>
+          <tr>
+              <td>Total Local Networking</td>
+              <td class="lineTotal" id="totalLocalNetworking"><b>#0</b></td>
+          </tr>
+          <tr class="grand">
+              <td>Total:</td>
+              <td><span id="intnet">0</span></td>
+          </tr>
+      </table>
+  </div>
+
+
+
+<div class="summary">
+  <table> 
+    <tr><td>Sub-total:</td><td><span id="subtotal">#0</span></td></tr> 
+    <tr><td>VAT (7.5%):</td><td><span id="vat">0</span></td></tr> 
+    <tr class="grand">
+      <td>Total:</td><td><span id="grandTotal">0</span></td>
+    </tr> 
+  </table>
+</div>
+
+
+    <!-- PAYMENT INFO -->
+  <div class="payment">
+      <strong>PAYMENT METHOD</strong><br>
+      Account Name: Hybrid Networks<br>
+      Account No: 0126100477<br>
+      Bank Name: WEMA BANK
+  </div>
+
+  <!-- PRINT BUTTON -->
+  <div class="print-btn">
+      <button onclick="window.print()">Print Invoice</button>
+  </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+function calculateInvoice() {
+
+    // ==============================
+    // --- Internet Installation (addition) ---
+    // ==============================
+    const qtty = document.querySelectorAll('.qtty');
+    const priice = document.querySelectorAll('.priice');
+    const llineTotal = document.querySelectorAll('.llineTotal');
+
+    let internetTotal = 0;
+
+    for (let i = 0; i < qtty.length; i++) {
+        let qty = parseFloat(qtty[i].value) || 0;
+        let price = parseFloat(priice[i].value) || 0;
+
+        let total = qty + price;
+
+        llineTotal[i].innerHTML =
+            `<b>#${total.toLocaleString(undefined, {maximumFractionDigits:2})}</b>`;
+
+        internetTotal += total;
+    }
+
+
+    // ==============================
+    // --- Local Networking (multiplication) ---
+    // ==============================
+    const qty = document.querySelectorAll('.qty');
+    const price = document.querySelectorAll('.price');
+    const lineTotal = document.querySelectorAll('.lineTotal');
+
+    let localTotal = 0;
+
+    for (let i = 0; i < qty.length; i++) {
+        let q = parseFloat(qty[i].value) || 0;
+        let p = parseFloat(price[i].value) || 0;
+
+        let total = q * p;
+
+        lineTotal[i].innerHTML =
+            `<b>#${total.toLocaleString(undefined, {maximumFractionDigits:2})}</b>`;
+
+        localTotal += total;
+    }
+
+
+    // ==============================
+    // --- Update Total Local Networking row ---
+    // ==============================
+    document.querySelectorAll('#totalLocalNetworking').forEach(el => {
+        el.innerHTML = `<b>#${localTotal.toLocaleString()}</b>`;
+    });
+
+
+    // ==============================
+    // --- SUBTOTAL ---
+    // ==============================
+    let subtotal = internetTotal + localTotal;
+
+    document.getElementById('subtotal').innerHTML =
+    `<b>#${subtotal.toLocaleString()}</b>`;
+    // ==============================
+    // --- VAT 7.5% ---
+    // ==============================
+    let vat = subtotal * 0.075;
+
+
+    // ==============================
+    // --- GRAND TOTAL ---
+    // ==============================
+    let grandTotal = subtotal + vat;
+
+
+    // ==============================
+    // --- Update Summary Section ---
+    // ==============================
+    if (document.getElementById('int')) {
+        document.getElementById('int').innerHTML =
+            `<b>#${internetTotal.toLocaleString()}</b>`;
+    }
+
+    document.getElementById('intnet').innerHTML =
+        `<b>#${subtotal.toLocaleString(undefined,{minimumFractionDigits:2})}</b>`;
+
+    document.getElementById('vat').innerHTML =
+        `<b>#${vat.toLocaleString(undefined,{minimumFractionDigits:2})}</b>`;
+
+    document.getElementById('grandTotal').innerHTML =
+        `<b>#${grandTotal.toLocaleString(undefined,{minimumFractionDigits:2})}</b>`;
+}
+
+
+// ==============================
+// --- Initial calculation ---
+// ==============================
+calculateInvoice();
+
+
+// ==============================
+// --- Recalculate on input change ---
+// ==============================
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', calculateInvoice);
+});
+</script>
+
+
+</body>
+
+
+</html>
